@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉLÉGANCE — Luxury Fashion & Designer Atelier</title>
+  <meta name="description" content="Discover premium apparel and luxury accessories for Men, Women, and Kids. Craftsmanship, sustainability, and timeless elegance." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+      
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <span class="logo-symbol">É</span>
+        <span class="logo-text">ÉLÉGANCE</span>
+        <span class="logo-sub">PARIS</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link" data-filter="new" onclick="filterCategory('all'); document.getElementById('sortSelect').value='featured';">New Arrivals</a>
+        <a href="#categories" class="nav-link">Collections</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn" id="searchBtn" aria-label="Search items" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="action-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <svg class="icon-sun hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <!-- Wishlist Icon -->
+        <button class="action-btn" id="wishlistBtn" aria-label="Open wishlist" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="badge" id="wishlistBadge">0</span>
+        </button>
+
+        <!-- Cart Icon -->
+        <button class="action-btn cart-btn-nav" id="cartBtn" aria-label="Open shopping cart" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="badge" id="cartBadge">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section Slider -->
+  <section class="hero-section" id="hero">
+    <div class="hero-slider" id="heroSlider">
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide active" style="background-image: linear-gradient(180deg, rgba(15,15,17,0.3) 0%, rgba(15,15,17,0.85) 100%), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop');">
+        <div class="container hero-content">
+          <span class="hero-tagline">FALL / WINTER ATELIER COLLECTION 2026</span>
+          <h1 class="hero-title">Redefining Modern Haute Couture</h1>
+          <p class="hero-description">Immerse yourself in bespoke Italian tailoring, sustainable silk silhouettes, and hand-finished luxury apparel crafted for the discerning minimalist.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" style="background-image: linear-gradient(180deg, rgba(15,15,17,0.3) 0%, rgba(15,15,17,0.85) 100%), url('https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=2000&auto=format&fit=crop');">
+        <div class="container hero-content">
+          <span class="hero-tagline">MEN'S TAILORED LUXURY</span>
+          <h1 class="hero-title">Precision, Structure & Sophistication</h1>
+          <p class="hero-description">Discover engineered wool blazers, full-grain leather timepieces, and timeless menswear built for effortless confidence.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" style="background-image: linear-gradient(180deg, rgba(15,15,17,0.3) 0%, rgba(15,15,17,0.85) 100%), url('https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=2000&auto=format&fit=crop');">
+        <div class="container hero-content">
+          <span class="hero-tagline">JUNIOR LUXE & ECO-COTTON</span>
+          <h1 class="hero-title">Playful Charm Meets Organic Craft</h1>
+          <p class="hero-description">Soft, durable, hypoallergenic designer wear for children. Crafted from 100% organic combed cotton and gentle linen.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Navigation Controls -->
+    <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous Slide">&#10094;</button>
+    <button class="slider-arrow next" id="sliderNext" aria-label="Next Slide">&#10095;</button>
+    
+    <!-- Slider Pagination Dots -->
+    <div class="slider-dots" id="sliderDots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+
+    <!-- Hero Feature Badges -->
+    <div class="hero-features">
+      <div class="container hero-features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🌿</span>
+          <div class="feature-info">
+            <h4>100% Organic Sourcing</h4>
+            <p>ETHICALLY MADE IN ITALY</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <div class="feature-info">
+            <h4>Complimentary Express</h4>
+            <p>DELIVERY IN 24-48 HOURS</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🛡️</span>
+          <div class="feature-info">
+            <h4>Authenticity Guaranteed</h4>
+            <p>2-YEAR GLOBAL ATELIER WARRANTY</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔄</span>
+          <div class="feature-info">
+            <h4>Hassle-Free Returns</h4>
+            <p>30-DAY COMPLIMENTARY EXCHANGES</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">CURATED DEPARTMENTS</span>
+        <h2 class="section-title">Explore Our Categories</h2>
+        <div class="title-divider"></div>
+        <p class="section-description">Discover tailor-made garments and bespoke accessories across our signature Men, Women, and Kids collections.</p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="categories-grid" id="categoriesGrid">
+        
+        <!-- Category Card 1: Women -->
+        <div class="category-card" data-dept="women">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Women's Apparel & Accessories" class="category-img" referrerPolicy="no-referrer" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <span class="category-tag">WOMEN'S ATELIER</span>
+            <h3 class="category-name">Clothing & High Accessories</h3>
+            <p class="category-count">38 Exclusive Designs</p>
+            <div class="category-sub-links">
+              <button class="btn-sublink" onclick="filterCategoryAndSub('women', 'clothing')">Clothing</button>
+              <button class="btn-sublink" onclick="filterCategoryAndSub('women', 'accessories')">Accessories</button>
+            </div>
+            <a href="#products" class="btn btn-sm btn-gold mt-2" onclick="filterCategory('women')">Shop Women &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Category Card 2: Men -->
+        <div class="category-card" data-dept="men">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" alt="Men's Apparel & Accessories" class="category-img" referrerPolicy="no-referrer" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <span class="category-tag">MEN'S COLLECTION</span>
+            <h3 class="category-name">Bespoke Suits & Leather Goods</h3>
+            <p class="category-count">42 Signature Pieces</p>
+            <div class="category-sub-links">
+              <button class="btn-sublink" onclick="filterCategoryAndSub('men', 'clothing')">Clothing</button>
+              <button class="btn-sublink" onclick="filterCategoryAndSub('men', 'accessories')">Accessories</button>
+            </div>
+            <a href="#products" class="btn btn-sm btn-gold mt-2" onclick="filterCategory('men')">Shop Men &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Category Card 3: Kids -->
+        <div class="category-card" data-dept="kids">
+          <div class="category-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800&auto=format&fit=crop" alt="Kids' Apparel & Accessories" class="category-img" referrerPolicy="no-referrer" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-content">
+            <span class="category-tag">JUNIOR LUXE</span>
+            <h3 class="category-name">Organic Wear & Accessories</h3>
+            <p class="category-count">24 Eco Essentials</p>
+            <div class="category-sub-links">
+              <button class="btn-sublink" onclick="filterCategoryAndSub('kids', 'clothing')">Clothing</button>
+              <button class="btn-sublink" onclick="filterCategoryAndSub('kids', 'accessories')">Accessories</button>
+            </div>
+            <a href="#products" class="btn btn-sm btn-gold mt-2" onclick="filterCategory('kids')">Shop Kids &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">THE HIGHLIGHTS</span>
+        <h2 class="section-title">Featured Collections</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <!-- Controls & Filter Toolbar -->
+      <div class="filter-toolbar">
+        
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">All Items</button>
+          <button class="filter-tab" data-filter="men">Men</button>
+          <button class="filter-tab" data-filter="women">Women</button>
+          <button class="filter-tab" data-filter="kids">Kids</button>
+          <button class="filter-tab" data-filter="clothing">Clothing Only</button>
+          <button class="filter-tab" data-filter="accessories">Accessories Only</button>
+        </div>
+
+        <!-- Search & Sort Bar -->
+        <div class="toolbar-controls">
+          <div class="search-input-wrap">
+            <input type="text" id="productSearchInput" placeholder="Search fashion, accessories..." aria-label="Search products" />
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+
+          <div class="price-range-wrap">
+            <label for="priceRange">Max Price: <strong id="priceRangeValue">$1,000</strong></label>
+            <input type="range" id="priceRange" min="20" max="1000" step="10" value="1000" />
+          </div>
+
+          <div class="sort-wrap">
+            <select id="sortSelect" class="sort-select" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Name: A-Z</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-products hidden" id="emptyProducts">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21 21-4.35-4.35"/><circle cx="11" cy="11" r="8"/></svg>
+        <h3>No Products Match Your Criteria</h3>
+        <p>Try resetting filters or searching for another keyword.</p>
+        <button class="btn btn-gold mt-2" onclick="resetFilters()">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About / Atelier Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop" alt="High Fashion Atelier Sourcing" referrerPolicy="no-referrer" />
+          </div>
+          <div class="about-img-sub">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop" alt="Atelier Interior Display" referrerPolicy="no-referrer" />
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">100%</span>
+            <span class="badge-lbl">Handmade in Florence</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-subtitle">OUR HERITAGE & ATELIER</span>
+          <h2 class="section-title">Crafting Timeless Elegance Since 2012</h2>
+          <div class="title-divider left"></div>
+          <p class="about-lead">ÉLÉGANCE was founded on a singular philosophy: true luxury lies in uncompromised craftsmanship, ethical sourcing, and silhouette perfection.</p>
+          <p class="about-text">From our artisan workshop in Florence, Italy, every seam is measured to millimeter accuracy. We source only certified GOTS organic cotton, cruelty-free mulberry silk, and vegetable-tanned full grain leather that ages gracefully over decades.</p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="50">0</span><span class="stat-plus">K+</span>
+              <span class="stat-label">Global Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Sustainable Traceability</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="48">0</span><span class="stat-plus"></span>
+              <span class="stat-label">Global Boutiques</span>
+            </div>
+          </div>
+
+          <a href="#newsletter" class="btn btn-gold mt-3">Join Our Atelier Circle &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews / Testimonials Section -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">PATRON TESTIMONIALS</span>
+        <h2 class="section-title">Voices of Satisfaction</h2>
+        <div class="title-divider"></div>
+        <p class="section-description">Read authentic experiences from style enthusiasts and verified patrons across the globe.</p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- Add Review Button & Form Toggle -->
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-gold" id="openReviewModalBtn">+ Submit Your Patron Review</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <span class="newsletter-tag">ATELIER PRIVILEGE</span>
+          <h2>Receive 15% Off Your First Order</h2>
+          <p>Subscribe to our private journal to receive exclusive early access to capsule collections, invitations to private trunk shows, and editorial styling guides.</p>
+          
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="input-group">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required aria-label="Email address for newsletter" />
+              <button type="submit" class="btn btn-gold">Subscribe</button>
+            </div>
+            <p class="form-disclaimer">By subscribing you agree to our Privacy Policy. Unsubscribe anytime.</p>
+          </form>
+
+          <div class="newsletter-success hidden" id="newsletterSuccess">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h4>Welcome to the ÉLÉGANCE Circle!</h4>
+              <p>Your 15% discount code <strong>WELCOME15</strong> has been dispatched to your inbox.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">GET IN TOUCH</span>
+        <h2 class="section-title">Atelier Concierge & Assistance</h2>
+        <div class="title-divider"></div>
+        <p class="section-description">Our personal styling team and boutique concierges are at your service for bespoke inquiries, sizing advice, and private consultations.</p>
+      </div>
+
+      <div class="contact-bento-grid">
+        <!-- Contact Form Bento Card -->
+        <div class="contact-card contact-form-card">
+          <h3>Send a Message to Our Concierge</h3>
+          <p class="text-muted">Fill in your inquiry details below and an Atelier Advisor will respond within 2 hours.</p>
+          
+          <form id="atelierContactForm" class="mt-3">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Your Name *</label>
+                <input type="text" id="contactName" required placeholder="e.g. Lord Alexander" />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" required placeholder="alexander@domain.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Inquiry Subject</label>
+              <select id="contactSubject">
+                <option value="styling">Private VIP Styling & Fitting</option>
+                <option value="bespoke">Bespoke Tailoring Request</option>
+                <option value="order">Order Tracking & Delivery</option>
+                <option value="general">General Atelier Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Tell us how our team can assist you today..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block">Send Concierge Message &rarr;</button>
+          </form>
+        </div>
+
+        <!-- Boutique Information Card -->
+        <div class="contact-card boutique-info-card">
+          <div class="info-block">
+            <span class="info-tag">DIRECT ATELIER CONCIERGE</span>
+            <h3>Paris Flagship & Global Desk</h3>
+            <p class="info-detail">📍 24 Rue du Faubourg Saint-Honoré, 75008 Paris, France</p>
+            <p class="info-detail">📞 +33 (0) 1 42 68 55 00</p>
+            <p class="info-detail">✉️ concierge@elegance-paris.com</p>
+            <p class="info-detail">⏰ Mon – Sat: 10:00 – 19:30 CET</p>
+          </div>
+
+          <div class="info-divider"></div>
+
+          <div class="info-block">
+            <span class="info-tag">GLOBAL BOUTIQUES</span>
+            <div class="boutiques-mini-list">
+              <div><strong>Milan:</strong> Via Montenapoleone, 8</div>
+              <div><strong>New York:</strong> 720 Fifth Avenue</div>
+              <div><strong>Tokyo:</strong> Ginza 6-Chome, Chuo-ku</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#" class="brand-logo footer-logo">
+            <span class="logo-symbol">É</span>
+            <span class="logo-text">ÉLÉGANCE</span>
+          </a>
+          <p class="footer-desc">Bespoke haute couture, fine leather accessories, and eco-certified garments for Men, Women, and Children.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Pinterest" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.23 2.62 7.85 6.32 9.27-.08-.79-.16-2 .03-2.86.17-.74 1.12-4.75 1.12-4.75s-.28-.57-.28-1.41c0-1.32.77-2.31 1.72-2.31.81 0 1.2.61 1.2 1.34 0 .82-.52 2.05-.79 3.18-.23.95.48 1.72 1.41 1.72 1.69 0 2.99-1.78 2.99-4.35 0-2.28-1.64-3.87-3.98-3.87-2.71 0-4.3 2.03-4.3 4.13 0 .82.31 1.7.71 2.18.08.1.09.18.06.32l-.26 1.08c-.04.18-.15.22-.35.13-1.31-.61-2.13-2.52-2.13-4.06 0-3.3 2.4-6.33 6.92-6.33 3.63 0 6.45 2.59 6.45 6.04 0 3.61-2.28 6.51-5.44 6.51-1.06 0-2.06-.55-2.4-1.2l-.65 2.49c-.24.91-.88 2.05-1.31 2.74C9.9 21.84 10.93 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+            <a href="#" aria-label="Twitter" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+            <a href="#" aria-label="Facebook" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Departments</h4>
+          <ul class="footer-links">
+            <li><a href="#products" onclick="filterCategoryAndSub('men', 'clothing')">Men's Apparel</a></li>
+            <li><a href="#products" onclick="filterCategoryAndSub('men', 'accessories')">Men's Accessories</a></li>
+            <li><a href="#products" onclick="filterCategoryAndSub('women', 'clothing')">Women's Couture</a></li>
+            <li><a href="#products" onclick="filterCategoryAndSub('women', 'accessories')">Women's Jewelry & Bags</a></li>
+            <li><a href="#products" onclick="filterCategoryAndSub('kids', 'clothing')">Junior Luxe Essentials</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4 class="footer-title">Patron Care</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showToast('Complimentary shipping available globally on all orders over $150')">Shipping & Delivery</a></li>
+            <li><a href="#" onclick="showToast('30-day complimentary exchanges via prepaid return label')">Returns & Exchanges</a></li>
+            <li><a href="#" onclick="showToast('Size Assistance: S (36-38), M (40-42), L (44-46), XL (48-50)')">Size & Fit Guide</a></li>
+            <li><a href="#" onclick="showToast('Contact Atelier Concierge at support@elegance.com')">Atelier Concierge</a></li>
+            <li><a href="#" onclick="showToast('Authenticity Certificate included with every luxury timepiece and handbag')">Authenticity Guarantee</a></li>
+          </ul>
+        </div>
+
+        <!-- Boutiques -->
+        <div class="footer-col">
+          <h4 class="footer-title">Flagship Boutiques</h4>
+          <p class="footer-contact"><strong>Paris:</strong> 24 Rue du Faubourg Saint-Honoré</p>
+          <p class="footer-contact"><strong>Milan:</strong> Via Montenapoleone, 8</p>
+          <p class="footer-contact"><strong>New York:</strong> 720 Fifth Avenue</p>
+          <p class="footer-contact"><strong>Hours:</strong> Mon - Sat: 10:00 - 19:30</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ÉLÉGANCE Atelier Inc. All rights reserved. Crafted with pure HTML, CSS & Vanilla JS.</p>
+        <div class="payment-methods">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">MASTERCARD</span>
+          <span class="pay-badge">AMEX</span>
+          <span class="pay-badge">APPLE PAY</span>
+          <span class="pay-badge">PAYPAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <h3>Your Shopping Bag (<span id="cartDrawerCount">0</span>)</h3>
+      <button class="drawer-close-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="free-shipping-bar">
+      <p id="freeShippingText">Add <strong>$150.00</strong> more to unlock FREE Express Shipping!</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="freeShippingProgress" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="drawer-body" id="cartItemsContainer">
+      <!-- Injected via script.js -->
+    </div>
+
+    <!-- Cart Footer -->
+    <div class="drawer-footer">
+      <!-- Promo Code Input -->
+      <div class="promo-box">
+        <input type="text" id="promoInput" placeholder="Promo code (e.g. ELEGANCE20)" />
+        <button class="btn btn-sm btn-gold" id="applyPromoBtn">Apply</button>
+      </div>
+      <div id="promoFeedback" class="promo-feedback"></div>
+
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <div class="summary-line discount-line hidden" id="discountLine">
+        <span>Discount (20%)</span>
+        <strong id="cartDiscount">-$0.00</strong>
+      </div>
+      <div class="summary-line">
+        <span>Estimated Shipping</span>
+        <strong id="cartShipping">FREE</strong>
+      </div>
+      <div class="summary-line total-line">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+
+      <button class="btn btn-gold btn-block mt-3" id="checkoutBtn">Proceed to Checkout &rarr;</button>
+      <button class="btn btn-link btn-block mt-1" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- Wishlist Modal / Drawer -->
+  <div class="modal-overlay" id="wishlistModalOverlay"></div>
+  <div class="modal-box wishlist-modal" id="wishlistModal">
+    <div class="modal-header">
+      <h3>Your Saved Favorites (<span id="wishlistModalCount">0</span>)</h3>
+      <button class="modal-close-btn" id="closeWishlistBtn">&times;</button>
+    </div>
+    <div class="modal-body" id="wishlistItemsContainer">
+      <!-- Injected via script.js -->
+    </div>
+  </div>
+
+  <!-- Product Quick View Modal -->
+  <div class="modal-overlay" id="quickViewOverlay"></div>
+  <div class="modal-box quick-view-modal" id="quickViewModal">
+    <button class="modal-close-btn" id="closeQuickViewBtn">&times;</button>
+    <div class="quick-view-grid" id="quickViewContent">
+      <!-- Injected via script.js -->
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="searchModalOverlay"></div>
+  <div class="modal-box search-modal" id="searchModal">
+    <div class="modal-header">
+      <h3>Instant Search Atelier</h3>
+      <button class="modal-close-btn" id="closeSearchBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="search-input-modal">
+        <input type="text" id="modalSearchInput" placeholder="Type to search (e.g., Blazer, Dress, Watch, Kids)..." autofocus />
+      </div>
+      <div class="search-results-grid" id="searchResultsGrid">
+        <p class="search-hint">Start typing above to see live results...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Write Review Modal -->
+  <div class="modal-overlay" id="reviewModalOverlay"></div>
+  <div class="modal-box review-modal" id="reviewModal">
+    <div class="modal-header">
+      <h3>Submit Your Patron Review</h3>
+      <button class="modal-close-btn" id="closeReviewModalBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="addReviewForm">
+        <div class="form-group">
+          <label for="reviewAuthor">Your Name / Title *</label>
+          <input type="text" id="reviewAuthor" required placeholder="e.g. Lady Vivienne M." />
+        </div>
+        <div class="form-group">
+          <label for="reviewRating">Star Rating *</label>
+          <select id="reviewRating" required>
+            <option value="5">5 Stars — Exceptional Quality</option>
+            <option value="4">4 Stars — Very Good</option>
+            <option value="3">3 Stars — Average</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reviewRole">Department Purchased</label>
+          <input type="text" id="reviewRole" placeholder="e.g. Women's Silk Evening Gown" />
+        </div>
+        <div class="form-group">
+          <label for="reviewText">Your Review *</label>
+          <textarea id="reviewText" rows="4" required placeholder="Share your experience with fit, fabric quality, and finish..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModalOverlay"></div>
+  <div class="modal-box checkout-modal" id="checkoutModal">
+    <div class="modal-header">
+      <h3>Atelier Secure Checkout</h3>
+      <button class="modal-close-btn" id="closeCheckoutBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="checkoutForm">
+        
+        <div class="checkout-steps">
+          <div class="checkout-step active" id="step1Indicator">1. Shipping</div>
+          <div class="checkout-step" id="step2Indicator">2. Payment</div>
+          <div class="checkout-step" id="step3Indicator">3. Confirmation</div>
+        </div>
+
+        <!-- Step 1: Shipping -->
+        <div class="step-content active" id="step1Content">
+          <h4>Shipping Address</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkoutFirstName">First Name *</label>
+              <input type="text" id="checkoutFirstName" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutLastName">Last Name *</label>
+              <input type="text" id="checkoutLastName" required placeholder="Doe" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="checkoutAddress">Street Address *</label>
+            <input type="text" id="checkoutAddress" required placeholder="123 Fashion Avenue" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkoutCity">City *</label>
+              <input type="text" id="checkoutCity" required placeholder="New York" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutZip">Zip / Postal Code *</label>
+              <input type="text" id="checkoutZip" required placeholder="10001" />
+            </div>
+          </div>
+          <button type="button" class="btn btn-gold btn-block mt-3" id="toStep2Btn">Continue to Payment &rarr;</button>
+        </div>
+
+        <!-- Step 2: Payment -->
+        <div class="step-content hidden" id="step2Content">
+          <h4>Payment Method</h4>
+          <div class="payment-options">
+            <label class="payment-option selected">
+              <input type="radio" name="paymentType" value="card" checked />
+              <span>Credit Card (Visa, MasterCard, Amex)</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentType" value="apple" />
+              <span>Apple Pay</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentType" value="paypal" />
+              <span>PayPal</span>
+            </label>
+          </div>
+
+          <div class="card-details-box mt-3" id="cardDetailsBox">
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" placeholder="4532 •••• •••• 8910" max="19" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cardExpiry">Expiry (MM/YY)</label>
+                <input type="text" id="cardExpiry" placeholder="12/28" />
+              </div>
+              <div class="form-group">
+                <label for="cardCvc">CVC</label>
+                <input type="text" id="cardCvc" placeholder="382" />
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-summary-mini mt-3">
+            <p>Total Due: <strong id="checkoutFinalTotal">$0.00</strong></p>
+          </div>
+
+          <div class="form-row mt-3">
+            <button type="button" class="btn btn-outline-light" id="backToStep1Btn">&larr; Back</button>
+            <button type="submit" class="btn btn-gold flex-1">Place Order & Pay</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div class="step-content hidden" id="step3Content">
+          <div class="order-success-box text-center">
+            <div class="success-icon">🎉</div>
+            <h3>Thank You For Your Order!</h3>
+            <p>Your order <strong id="generatedOrderId">#ELG-94821</strong> has been successfully confirmed.</p>
+            <p class="mt-2 text-muted">A tracking link and invoice have been dispatched to your email. Your handcrafted items will ship within 24 hours.</p>
+            <button type="button" class="btn btn-gold mt-4" id="finishCheckoutBtn">Back to Shop</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript script file -->
+  <script src="./script.js" defer></script>
+</body>
+</html>

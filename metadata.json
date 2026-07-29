@@ -1,0 +1,6 @@
+{
+  "name": "Elegance - Premium Fashion Store",
+  "description": "Modern, fully responsive luxury fashion website built using pure HTML, CSS, and vanilla JavaScript.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
